@@ -1,4 +1,5 @@
 import requests
+import json
 
 ITEM_ENDPOINT_URL = 'https://hacker-news.firebaseio.com/v0/item/{}.json'
 
@@ -31,5 +32,5 @@ def get_comments_recursive(item_id):
     return []
 
 
-comments = get_comments_for('10658787')
-print comments
+def load_example_comments():
+    return json.load(open('example_comments.json', 'r'))
