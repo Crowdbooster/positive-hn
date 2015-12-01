@@ -1,0 +1,1 @@
+web: gunicorn main.wsgi:app --timeout 300 --keep-alive 5 --log-file -
