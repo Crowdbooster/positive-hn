@@ -19,6 +19,7 @@ def current_app():
 
 
 def _configure_app(app):
+    app.debug = True
     app.config.from_object(main.settings)
     # env variable value should be a config filename for additional settings.
     app.config.from_envvar('POSITIVEHN_SETTINGS', silent=True)
