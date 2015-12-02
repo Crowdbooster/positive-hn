@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 
-export default class Picker extends Component {
+export default class FlipButton extends Component {
   render() {
     const { value, onChange, options } = this.props
 
@@ -20,7 +20,7 @@ export default class Picker extends Component {
   }
 }
 
-Picker.propTypes = {
+FlipButton.propTypes = {
   options: PropTypes.arrayOf(
     PropTypes.string.isRequired
   ).isRequired,

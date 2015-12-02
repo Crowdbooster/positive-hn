@@ -40,7 +40,8 @@ class App extends Component {
     return (
       <div>
         <FlipButton value={selectedHN}
-            onSubmit={this.handleChange}
+                onChange={this.handleChange}
+                options={[ 'reactjs', 'frontend' ]} />
         <p>
           {lastUpdated &&
             <span>
