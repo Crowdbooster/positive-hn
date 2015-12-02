@@ -1,5 +1,9 @@
 import requests
 import json
+import os
+
+CURR_DIR = os.path.dirname(os.path.abspath(__file__))
+FIXTURE_PATH = os.path.join(CURR_DIR, 'example_comments.json')
 
 ITEM_ENDPOINT_URL = 'https://hacker-news.firebaseio.com/v0/item/{}.json'
 
@@ -33,4 +37,4 @@ def get_comments_recursive(item_id):
 
 
 def load_example_comments():
-    return json.load(open('example_comments.json', 'r'))
+    return json.load(open(FIXTURE_PATH, 'r'))
